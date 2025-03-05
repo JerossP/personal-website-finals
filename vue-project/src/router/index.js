@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/views/Home.vue';
+import Index from '@/views/Index.vue';
 import Gallery from '@/views/Gallery.vue';
 import Comments from '@/views/Comments.vue';
 import Reference from '@/views/Reference.vue';
@@ -7,8 +7,8 @@ import Reference from '@/views/Reference.vue';
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Index',
+    component: Index
   },
   {
     path: '/gallery',
