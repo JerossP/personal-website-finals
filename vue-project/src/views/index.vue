@@ -25,7 +25,7 @@
         <div class="container">
           <div class="profile-header">
             <div class="profile-picture-wrapper">
-              <img src="@/assets/images/gradpic.png" alt="Jeross Reilan R. Perez" class="profile-picture" />
+              <img src="" alt="Jeross Reilan R. Perez" class="profile-picture" />
             </div>
             <h1>Jeross Reilan R. Perez</h1>
             <p>Mandaluyong City | Active Lifestyle Enthusiast</p>
@@ -47,7 +47,7 @@
       <footer class="section-p1">
         <div class="footer-container">
           <div class="col">
-            <img src="@/assets/images/logo.png" alt="Logo" />
+            <img src="" alt="Logo" />
           </div>
           <div class="col">
             <h4>Contact</h4>
