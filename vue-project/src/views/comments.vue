@@ -48,7 +48,7 @@
     <footer class="section-p1">
       <div class="footer-container">
         <div class="col">
-          <img src="@/images/logo.png" alt="logo">
+          <img src="" alt="logo">
         </div>
         
         <div class="col">
