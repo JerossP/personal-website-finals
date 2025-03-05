@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import index from '@/views/index.vue';
-import Gallery from '@/views/Gallery.vue';
-import Comments from '@/views/Comments.vue';
-import Reference from '@/views/Reference.vue';
+import gallery from '@/views/gallery.vue';
+import comments from '@/views/comments.vue';
+import reference from '@/views/reference.vue';
 
 const routes = [
   {
@@ -12,18 +12,18 @@ const routes = [
   },
   {
     path: '/gallery',
-    name: 'Gallery',
-    component: Gallery
+    name: 'gallery',
+    component: gallery
   },
   {
     path: '/comments',
-    name: 'Comments',
-    component: Comments
+    name: 'comments',
+    component: comments
   },
   {
     path: '/reference',
-    name: 'Reference',
-    component: Reference
+    name: 'reference',
+    component: reference
   }
 ];
 
