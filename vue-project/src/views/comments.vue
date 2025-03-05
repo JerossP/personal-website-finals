@@ -33,7 +33,7 @@
           </div>
         </form>
       </div>
-      
+
   
       <!-- Comments List -->
       <div class="comments-list">
@@ -48,7 +48,7 @@
     <footer class="section-p1">
       <div class="footer-container">
         <div class="col">
-          <img src="../images/logo.png" alt="logo">
+          <img src="src/images/logo.png" alt="logo">
         </div>
         
         <div class="col">

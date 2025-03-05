@@ -27,9 +27,9 @@
     data() {
       return {
         images: [
-          { src: '..images/beach.jpg', alt: 'Beach Image' },
-          { src: '..images/jerox.jpg', alt: 'Jerox Image' },
-          { src: '..images/prom.jpg', alt: 'Prom Image' }
+          { src: 'src/images/beach.jpg', alt: 'Beach Image' },
+          { src: 'src/images/jerox.jpg', alt: 'Jerox Image' },
+          { src: 'src/images/prom.jpg', alt: 'Prom Image' }
         ]
       };
     }
