@@ -112,7 +112,9 @@ export default {
         }
       ],
       images: [
-        { src: '../src/assets/gradpic.png' },
+        { src: '/gradpic.png', alt: 'gradpic' },
+      
+
       ]
     }
   },
@@ -227,7 +229,7 @@ p { font-size: 16px; color: #465b52; margin: 15px 0 20px; }
 /* hero section */
 
 #hero{
-    background-image: url(../src/assets//background.jpg);
+  background-image: url('/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
