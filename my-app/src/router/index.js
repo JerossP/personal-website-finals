@@ -1,11 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/components/index.vue'; // Ensure correct path
+import index from '@/components/index.vue'; // Ensure correct path
+import comments from '@/views/comments.vue';
+import gallery from '@/views/gallery.vue';
+import reference from '@/views/reference.vue';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/gallery', component: () => import('@/components/gallery.vue') },
-  { path: '/comments', component: () => import('@/components/comments.vue') },
-  { path: '/reference', component: () => import('@/components/reference.vue') },
+  { path: '/', component: index },
+  { path: '/comments', component: comments },
+  { path: '/gallery', component: gallery },
+  { path: '/reference', component: reference },
 ];
 
 const router = createRouter({
