@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router'; // Ensure correct path
+import router from './router/router'; // Ensure correct path
 
 const app = createApp(App);
 app.use(router);
