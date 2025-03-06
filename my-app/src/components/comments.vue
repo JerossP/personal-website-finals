@@ -75,6 +75,7 @@
   
   <script setup>
   import { ref, onMounted } from 'vue';
+  import supabase from '@/supabase'; 
   
   const name = ref('');
   const comment = ref('');
