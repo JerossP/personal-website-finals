@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import index from '@/components/index.vue'; // Ensure correct path
+import index from '@/views/index.vue'; 
 import comments from '@/views/comments.vue';
 import gallery from '@/views/gallery.vue';
 import reference from '@/views/reference.vue';
