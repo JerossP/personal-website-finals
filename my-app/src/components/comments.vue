@@ -69,7 +69,7 @@
             </a>
           </div>
         </div>
-      </div>
+      
     </footer>
   </template>
   
