@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import index from '@/views/index.vue';
 import gallery from '@/views/gallery.vue';
 import comments from '@/views/comments.vue';
-import reference from '@/views/reference.vue';
+import reference from '../../../my-app/src/components/reference.vue';
 
 const routes = [
   {
