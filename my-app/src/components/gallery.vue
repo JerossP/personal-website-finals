@@ -29,11 +29,10 @@
     data() {
       return {
         images: [
-          { src: '../src/assets/beach.jpg', alt: 'Beach Image' },
-          { src: '../src/assets//jerox.jpg', alt: 'Jerox Image' },
-          { src: '../src/assets//prom.jpg', alt: 'Prom Image' },
-          
-        ]
+            { src: '/beach.jpg', alt: 'Beach Image' },
+            { src: '/jerox.jpg', alt: 'Jerox Image' },
+            { src: '/prom.jpg', alt: 'Prom Image' },
+            ]
       };
     }
   };
