@@ -1,122 +1,133 @@
 <template>
-    <div>
-      <header id="header">
-        <div class="logo-container">
-          <span class="brand-name">Jeross' Profile Webpage</span>
-        </div>
-        <nav>
-          <ul id="navbar">
-            <li><router-link to="/" class="active">Home</router-link></li>
-            <li><router-link to="/gallery">Gallery</router-link></li>
-            <li><router-link to="/comments">Comments</router-link></li>
-            <li><router-link to="/reference"><i class="fa-solid fa-asterisk"></i></router-link></li>
-          </ul>
-        </nav>
-      </header>
-  
-      <section id="hero">
-        <h4>Whats good ya'll</h4>
-        <h2>IM JEROSS PEREZ FROM MI231</h2>
-        <h1>come look around!</h1>
-        <p>I LOVE CUDDLES!</p>
-      </section>
-  
-      <section id="contents">
-        <div class="container">
-          <div class="profile-header">
-            <div class="profile-picture-wrapper">
-              <img src="" alt="Jeross Reilan R. Perez" class="profile-picture" />
-            </div>
-            <h1>Jeross Reilan R. Perez</h1>
-            <p>Mandaluyong City | Active Lifestyle Enthusiast</p>
-            <p>Hello! I love going out and staying active, though I'm not particularly sporty.</p>
-          </div>
-          
-          <div class="section-grid">
-            <div class="content-section" v-for="(section, index) in sections" :key="index">
-              <h2>{{ section.title }}</h2>
-              <ul v-if="Array.isArray(section.content)">
-                <li v-for="(item, idx) in section.content" :key="idx">{{ item }}</li>
-              </ul>
-              <p v-else>{{ section.content }}</p>
+  <div>
+    <header id="header">
+      <div class="logo-container">
+        <span class="brand-name">Jeross' Profile Webpage</span>
+      </div>
+
+      <nav>
+        <ul id="navbar">
+          <li><router-link to="/" class="active">Home</router-link></li>
+          <li><router-link to="/gallery">Gallery</router-link></li>
+          <li><router-link to="/comments">Comments</router-link></li>
+          <li><router-link to="/reference"><i class="fa-solid fa-asterisk"></i></router-link></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <h4>Whats good ya'll</h4>
+      <h2>IM JEROSS PEREZ FROM MI231</h2>
+      <h1>come look around!</h1>
+      <p>I LOVE CUDDLES!</p>
+    </section>
+
+    <section id="contents">
+      <div class="container">
+        <div class="profile-header">
+          <div class="profile-picture-wrapper">
+            <div v-for="(image, index) in images" :key="index" class="gallery-item">
+              <img :src="image.src" :alt="image.alt" loading="lazy" />
             </div>
           </div>
+          <h1>Jeross Reilan R. Perez</h1>
+          <p>Mandaluyong City | Active Lifestyle Enthusiast</p>
+          <p>Hello! I love going out and staying active, though I'm not particularly sporty.</p>
         </div>
-      </section>
-  
-      <footer class="section-p1">
-        <div class="footer-container">
-          <div class="col">
-            <img src="" alt="Logo" />
-          </div>
-          <div class="col">
-            <h4>Contact</h4>
-            <p><strong>Address:</strong> 1550 Mandaluyong, Philippines</p>
-            <p><strong>Phone:</strong> 0915-135-7434</p>
-            <p><strong>Email:</strong> jrperez2@student.apc.edu.ph</p>
-          </div>
-          <div class="col">
-            <h4>Follow Me</h4>
-            <div class="icon">
-              <a href="https://www.facebook.com/JerossPerez/" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://www.instagram.com/jrose.to/" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
+
+        <div class="section-grid">
+          <div class="content-section" v-for="(section, index) in sections" :key="index">
+            <h2>{{ section.title }}</h2>
+            <ul v-if="Array.isArray(section.content)">
+              <li v-for="(item, idx) in section.content" :key="idx">{{ item }}</li>
+            </ul>
+            <p v-else>{{ section.content }}</p>
           </div>
         </div>
-      </footer>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        sections: [
-          {
-            title: "Education",
-            content: [
-              "High School: Good Shepherd Christian School (Graduated with honors)",
-              "Senior High School: Rizal Technological University (Graduated with honors)"
-            ]
-          },
-          {
-            title: "Course",
-            content: "Pursuing Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology at Asia Pacific College."
-          },
-          {
-            title: "IT Experience",
-            content: [
-              "Basic knowledge of Python",
-              "Basic knowledge of Java",
-              "Basic knowledge of Android Studio",
-              "Basic knowledge of HTML, SQL, and CSS"
-            ]
-          },
-          {
-            title: "Hobbies",
-            content: [
-              "Playing billiards",
-              "Competitive FPS gaming",
-              "K-dramas and sports anime enthusiast",
-              "Regular gym-goer",
-              "Night rides explorer"
-            ]
-          },
-          {
-            title: "Goals",
-            content: "Aiming to graduate with an IT degree and gain industry experience. Long-term goal includes establishing a tech-related business post-graduation."
-          }
-        ]
-      };
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="footer-container">
+        <div class="col">
+          <h4>Contact</h4>
+          <p><strong>Address:</strong> 1550 Mandaluyong, Philippines</p>
+          <p><strong>Phone:</strong> 0915-135-7434</p>
+          <p><strong>Email:</strong> jrperez2@student.apc.edu.ph</p>
+        </div>
+        <div class="col">
+          <h4>Follow Me</h4>
+          <div class="icon">
+            <a href="https://www.facebook.com/JerossPerez/" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/jrose.to/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      sections: [
+        {
+          title: "Education",
+          content: [
+            "High School: Good Shepherd Christian School (Graduated with honors)",
+            "Senior High School: Rizal Technological University (Graduated with honors)"
+          ]
+        },
+        {
+          title: "Course",
+          content: "Pursuing Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology at Asia Pacific College."
+        },
+        {
+          title: "IT Experience",
+          content: [
+            "Basic knowledge of Python",
+            "Basic knowledge of Java",
+            "Basic knowledge of Android Studio",
+            "Basic knowledge of HTML, SQL, and CSS"
+          ]
+        },
+        {
+          title: "Hobbies",
+          content: [
+            "Playing billiards",
+            "Competitive FPS gaming",
+            "K-dramas and sports anime enthusiast",
+            "Regular gym-goer",
+            "Night rides explorer"
+          ]
+        },
+        {
+          title: "Goals",
+          content: "Aiming to graduate with an IT degree and gain industry experience. Long-term goal includes establishing a tech-related business post-graduation."
+        }
+      ],
+      images: [
+        { src: '../src/assets/gradpic.png' },
+      ]
     }
-  };
-  </script>
+  },
+
+  methods: {
+    toggleMenu() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('active');
+    },
+  }
+};
+</script>
   
-  <style scoped>
+<style scoped>
+ @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
  @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* General Resets */
@@ -216,7 +227,7 @@ p { font-size: 16px; color: #465b52; margin: 15px 0 20px; }
 /* hero section */
 
 #hero{
-    background-image: url(../IMAGES/background.jpg);
+    background-image: url(../src/assets//background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -353,42 +364,8 @@ body {
     top: 2px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .section-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-    }
-    
-    .content-section {
-        padding: 22px;
-    }
-}
 
-@media (max-width: 768px) {
-    .profile-picture-wrapper {
-        width: 200px;
-        height: 240px;
-    }
-    
-    .profile-header {
-        padding: 30px 20px;
-    }
-    
-    .content-section h2 {
-        font-size: 1.3em;
-    }
-}
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    .section-grid {
-        gap: 20px;
-    }
-}
 
 /*gallery */
 
@@ -518,6 +495,128 @@ footer .icon i {
 footer .icon i:hover {
     color: #cce7d0; /* Hover color */
     transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+@media screen and (max-width: 1024px) {
+    .section-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure dynamic grid behavior */
+        gap: 25px;
+    }
+    
+    .content-section {
+        padding: 22px;
+    }
+
+    #header {
+        display: flex;
+        flex-wrap: wrap; /* Ensures items wrap properly on smaller screens */
+        padding: 15px 40px;
+    }
+}
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Navbar */
+    #navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #e3e3e3;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    #navbar li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Hero Section */
+    #hero {
+        padding: 0 40px;
+        height: 70vh;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    /* Profile Section */
+    .profile-picture-wrapper {
+        width: 180px;
+        height: 220px;
+    }
+
+    .profile-header {
+        padding: 25px 15px;
+    }
+
+    .content-section h2 {
+        font-size: 1.3em;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col {
+        margin-bottom: 15px;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .section-grid {
+        gap: 20px;
+    }
+
+    #hero {
+        padding: 0 20px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 10px;
+    }
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* ... existing media query ... */
+  .menu-toggle {
+    display: block; /* Show menu toggle on smaller screens */
+  }
 }
   </style>
   

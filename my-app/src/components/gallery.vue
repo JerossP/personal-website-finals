@@ -9,6 +9,8 @@
         <li><router-link to="/comments">Comments</router-link></li>
         <li><router-link to="/reference"><i class="fa-solid fa-asterisk"></i></router-link></li>
       </ul>
+      
+
     </section>
   
     <div class="gallery-header">
@@ -27,17 +29,23 @@
     data() {
       return {
         images: [
-          { src: 'src/images/beach.jpg', alt: 'Beach Image' },
-          { src: 'src/images/jerox.jpg', alt: 'Jerox Image' },
-          { src: 'src/images/prom.jpg', alt: 'Prom Image' }
+          { src: '../src/assets/beach.jpg', alt: 'Beach Image' },
+          { src: '../src/assets//jerox.jpg', alt: 'Jerox Image' },
+          { src: '../src/assets//prom.jpg', alt: 'Prom Image' },
+          
         ]
       };
     }
   };
+
+  function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+}
+
   </script>
   
   <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* General Resets */
 * {
@@ -273,42 +281,8 @@ body {
     top: 2px;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .section-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-    }
-    
-    .content-section {
-        padding: 22px;
-    }
-}
 
-@media (max-width: 768px) {
-    .profile-picture-wrapper {
-        width: 200px;
-        height: 240px;
-    }
-    
-    .profile-header {
-        padding: 30px 20px;
-    }
-    
-    .content-section h2 {
-        font-size: 1.3em;
-    }
-}
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    .section-grid {
-        gap: 20px;
-    }
-}
 
 /*gallery */
 
@@ -438,6 +412,122 @@ footer .icon i {
 footer .icon i:hover {
     color: #cce7d0; /* Hover color */
     transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+@media screen and (max-width: 1024px) {
+    .section-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure dynamic grid behavior */
+        gap: 25px;
+    }
+    
+    .content-section {
+        padding: 22px;
+    }
+
+    #header {
+        display: flex;
+        flex-wrap: wrap; /* Ensures items wrap properly on smaller screens */
+        padding: 15px 40px;
+    }
+}
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Navbar */
+    #navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #e3e3e3;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #navbar.active {
+        display: flex;
+    }
+
+    #navbar li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    #hero {
+        padding: 0 40px;
+        height: 70vh;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    /* Profile Section */
+    .profile-picture-wrapper {
+        width: 180px;
+        height: 220px;
+    }
+
+    .profile-header {
+        padding: 25px 15px;
+    }
+
+    .content-section h2 {
+        font-size: 1.3em;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col {
+        margin-bottom: 15px;
+    }
+}
+
+/* Small Mobile View */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .section-grid {
+        gap: 20px;
+    }
+
+    #hero {
+        padding: 0 20px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 10px;
+    }
 }
   </style>
   
