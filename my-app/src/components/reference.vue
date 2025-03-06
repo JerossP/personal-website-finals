@@ -11,10 +11,14 @@
           <li><router-link to="/comments">Comments</router-link></li>
           <li><router-link to="/reference" class="active"><i class="fa-solid fa-asterisk"></i></router-link></li>
         </ul>
-     
+    
+      </section>
+
+      <section id ="reference"> 
 
       </section>
-  
+
+
       <footer class="section-p1">
         <div class="footer-container">
           <div class="col">
